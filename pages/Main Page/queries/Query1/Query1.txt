@@ -1,0 +1,1 @@
+SELECT * FROM public."aktorwfilmie" LIMIT 10;
