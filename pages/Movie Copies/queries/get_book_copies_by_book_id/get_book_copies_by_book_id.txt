@@ -1,0 +1,1 @@
+SELECT * FROM public.kopiaksiazki WHERE ID = {{appsmith.URL.queryParams.bookId}};

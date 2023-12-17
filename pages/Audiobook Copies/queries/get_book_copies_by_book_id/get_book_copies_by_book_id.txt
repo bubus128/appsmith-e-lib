@@ -1,0 +1,1 @@
+SELECT * FROM public.audiobooki WHERE ID = {{appsmith.URL.queryParams.audioBooksId}};

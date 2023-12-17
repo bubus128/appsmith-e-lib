@@ -1,0 +1,1 @@
+UPDATE public.filmy SET "tytul"= '{{Table1.updatedRow.tytul}}', "czastrwania"= '{{Table1.updatedRow.czastrwania}}', "kategoriaid"= '{{Table1.updatedRow.kategoriaid}}' WHERE "id"= {{Table1.updatedRow.id}};

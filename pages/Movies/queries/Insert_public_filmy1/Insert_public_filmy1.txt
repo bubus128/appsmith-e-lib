@@ -1,0 +1,1 @@
+INSERT INTO public.filmy ("tytul","czastrwania","kategoriaid") VALUES ('{{(Table1.newRow || {}).tytul}}','{{(Table1.newRow || {}).czastrwania}}','{{(Table1.newRow || {}).kategoriaid}}')

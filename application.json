@@ -1,0 +1,49 @@
+{
+  "pages": [
+    {
+      "id": "Main Page",
+      "isDefault": true
+    },
+    {
+      "id": "Books",
+      "isDefault": false
+    },
+    {
+      "id": "Book Copies",
+      "isDefault": false
+    },
+    {
+      "id": "Movies",
+      "isDefault": false
+    },
+    {
+      "id": "Audiobooks",
+      "isDefault": false
+    },
+    {
+      "id": "Movie Copies",
+      "isDefault": false
+    },
+    {
+      "id": "Audiobook Copies",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "color": "#E3DEFF",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "publishedAppLayout": {
+    "type": "FLUID"
+  },
+  "unpublishedCustomJSLibs": [],
+  "publishedCustomJSLibs": [],
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "isManualUpdate": false,
+  "deleted": false
+}
