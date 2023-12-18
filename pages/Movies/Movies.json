@@ -28,8 +28,8 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Movies_Select_public_filmy1",
-              "name": "Select_public_filmy1",
+              "id": "Movies_All_movies",
+              "name": "All_movies",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
@@ -41,8 +41,8 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Movies_Total_record_public_filmy1",
-              "name": "Total_record_public_filmy1",
+              "id": "Movies_Count_movies",
+              "name": "Count_movies",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
@@ -63,5 +63,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "657dd0d75e703460a35a687d_657e3bad5e703460a35a68e6"
+  "gitSyncId": "657ec16a5e703460a35a693a_657ed5435e703460a35a6973"
 }

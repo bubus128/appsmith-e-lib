@@ -13,19 +13,15 @@
       "isDefault": false
     },
     {
-      "id": "Movies",
-      "isDefault": false
-    },
-    {
       "id": "Audiobooks",
       "isDefault": false
     },
     {
-      "id": "Movie Copies",
+      "id": "Movies",
       "isDefault": false
     },
     {
-      "id": "Audiobook Copies",
+      "id": "Movie copies",
       "isDefault": false
     }
   ],

@@ -28,8 +28,8 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Books_Select_public_ksiazki1",
-              "name": "Select_public_ksiazki1",
+              "id": "Books_All_books",
+              "name": "All_books",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
@@ -41,8 +41,8 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Books_Total_record_public_ksiazki1",
-              "name": "Total_record_public_ksiazki1",
+              "id": "Books_Count_books",
+              "name": "Count_books",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],

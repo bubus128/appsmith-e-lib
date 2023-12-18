@@ -2,6 +2,7 @@
   "unpublishedPage": {
     "name": "Audiobooks",
     "slug": "audiobooks",
+    "customSlug": "",
     "layouts": [
       {
         "viewMode": false,
@@ -13,7 +14,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 570,
+          "bottomRow": 670,
           "containerStyle": "none",
           "snapRows": 53,
           "parentRowSpace": 1,
@@ -28,23 +29,25 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Audiobooks_Select_public_audiobooki1",
-              "name": "Select_public_audiobooki1",
+              "id": "Audiobooks_Audiobooks_by_id",
+              "name": "Audiobooks_by_id",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "Table1.sortOrder.column ? \"ORDER BY \" + Table1.sortOrder.column + \"  \" + (Table1.sortOrder.order !== \"desc\" ? \"\" : \"DESC\") : \"\"",
-                "Table1.pageSize",
-                "Table1.pageOffset"
+                "appsmith.URL.queryParams.bookId"
               ],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
-              "id": "Audiobooks_Total_record_public_audiobooki1",
-              "name": "Total_record_public_audiobooki1",
+              "id": "Audiobooks_Count_audiobooks_by_id",
+              "name": "Count_audiobooks_by_id",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.bookId"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]
@@ -62,5 +65,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "657dd0d75e703460a35a687d_657e3bca5e703460a35a68ed"
+  "gitSyncId": "657ec16a5e703460a35a693a_657ed4015e703460a35a696c"
 }

@@ -1,6 +1,7 @@
 {
     "mobileBottomRow": 8,
     "widgetName": "Text1",
+    "dynamicPropertyPathList": [],
     "displayName": "Text",
     "iconSVG": "/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
     "searchTags": [
@@ -14,7 +15,7 @@
     "type": "TEXT_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 40,
-    "animateLoading": true,
+    "animateLoading": false,
     "overflow": "NONE",
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "parentColumnSpace": 13.3125,
@@ -28,7 +29,7 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "Hello {{appsmith.user.name || appsmith.user.email}}",
+    "text": "\"{{appsmith.URL.queryParams.title}}\" Audiobooks",
     "key": "5mzig2ar1l",
     "isDeprecated": false,
     "rightColumn": 42,
@@ -49,9 +50,11 @@
     "isLoading": false,
     "mobileTopRow": 4,
     "responsiveBehavior": "fill",
+    "originalTopRow": 0,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 24,
     "maxDynamicHeight": 9000,
+    "originalBottomRow": 4,
     "fontSize": "1rem",
     "minDynamicHeight": 4
 }

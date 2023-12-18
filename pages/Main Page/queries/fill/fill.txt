@@ -1,0 +1,98 @@
+-- Wypełnianie tabeli Persons
+INSERT INTO Persons (ID, LastName, FirstName) VALUES
+    (1, 'Smith1', 'John1'),
+    (2, 'Johnson2', 'Alice2'),
+    (3, 'Brown3', 'Bob3'),
+    (4, 'Doe4', 'Jane4'),
+    (5, 'Miller5', 'Chris5'),
+    (6, 'Williams6', 'Emma6'),
+    (7, 'Wilson7', 'David7'),
+    (8, 'Jones8', 'Lisa8'),
+    (9, 'Taylor9', 'Michael9'),
+    (10, 'Anderson10', 'Olivia10'),
+    (11, 'Martin11', 'Ryan11'),
+    (12, 'White12', 'Sophia12');
+
+-- Wypełnianie tabeli Authors
+INSERT INTO Authors (ID, PersonID) VALUES
+    (1, 1),
+    (2, 2),
+    (3, 3);
+
+-- Wypełnianie tabeli Categories
+INSERT INTO Categories (ID, Name) VALUES
+    (1, 'Action'),
+    (2, 'Drama'),
+    (3, 'Sci-Fi');
+
+-- Wypełnianie tabeli Movies
+INSERT INTO Movies (ID, Title, Duration, CategoryID) VALUES
+    (1, 'The Matrix', 150, 3),
+    (2, 'Inception', 180, 3),
+    (3, 'Titanic', 195, 2);
+
+-- Wypełnianie tabeli Directors
+INSERT INTO Directors (ID, PersonID) VALUES
+    (1, 4),
+    (2, 5),
+    (3, 6);
+
+-- Wypełnianie tabeli Screenwriters
+INSERT INTO Screenwriters (ID, PersonID) VALUES
+    (1, 7),
+    (2, 8),
+    (3, 9);
+
+-- Wypełnianie tabeli Actors
+INSERT INTO Actors (ID, PersonID) VALUES
+    (1, 10),
+    (2, 11),
+    (3, 12);
+
+-- Wypełnianie tabeli ActorsInFilm
+INSERT INTO ActorsInFilm (ID, ActorID, FilmID) VALUES
+    (1, 1, 1),
+    (2, 2, 2),
+    (3, 3, 3);
+
+-- Wypełnianie tabeli FilmDirection
+INSERT INTO FilmDirection (ID, DirectorID, FilmID) VALUES
+    (1, 1, 1),
+    (2, 2, 2),
+    (3, 3, 3);
+
+-- Wypełnianie tabeli ScreenwriterFilm
+INSERT INTO ScreenwriterFilm (ID, ScreenwriterID, FilmID) VALUES
+    (1, 1, 1),
+    (2, 2, 2),
+    (3, 3, 3);
+
+-- Wypełnianie tabeli Books
+INSERT INTO Books (ID, Author, Title) VALUES
+    (1, 'Stephen King', 'The Shining'),
+    (2, 'Jane Austen', 'Pride and Prejudice'),
+    (3, 'George Orwell', '1984');
+
+-- Wypełnianie tabeli BookCopies
+INSERT INTO BookCopies (ID, BookID, ReleaseYear, Available) VALUES
+    (1, 1, 2005, true),
+    (2, 2, 2010, true),
+    (3, 3, 2015, false);
+
+-- Wypełnianie tabeli Audiobooks
+INSERT INTO Audiobooks (ID, BookID, Available) VALUES
+    (1, 1, true),
+    (2, 2, true),
+    (3, 3, false);
+
+-- Wypełnianie tabeli Authorship
+INSERT INTO Authorship (ID, AuthorID, BookID) VALUES
+    (1, 1, 1),
+    (2, 2, 2),
+    (3, 3, 3);
+
+-- Wypełnianie tabeli MovieCopies
+INSERT INTO MovieCopies (ID, MovieID, ReleaseYear, Available) VALUES
+    (1, 1, 2005, true),
+    (2, 2, 2010, true),
+    (3, 3, 2015, false);
