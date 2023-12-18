@@ -15,6 +15,7 @@
     "type": "BUTTON_GROUP_WIDGET",
     "groupButtons": {
         "groupButton1": {
+            "onClick": "{{navigateTo('Movies', {}, 'SAME_WINDOW');}}",
             "buttonType": "SIMPLE",
             "iconName": "book",
             "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -46,7 +47,10 @@
     "mobileRightColumn": 46,
     "animateLoading": true,
     "parentColumnSpace": 13.3125,
-    "dynamicTriggerPathList": [{"key": "groupButtons.groupButton2.onClick"}],
+    "dynamicTriggerPathList": [
+        {"key": "groupButtons.groupButton2.onClick"},
+        {"key": "groupButtons.groupButton1.onClick"}
+    ],
     "leftColumn": 22,
     "dynamicBindingPathList": [
         {"key": "groupButtons.groupButton1.buttonColor"},
