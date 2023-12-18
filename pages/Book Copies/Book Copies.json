@@ -29,8 +29,20 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Book Copies_get_book_copies_by_book_id",
-              "name": "get_book_copies_by_book_id",
+              "id": "Book Copies_Copies_by_id",
+              "name": "Copies_by_id",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.URL.queryParams.bookId"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Book Copies_Count_copies_by_id",
+              "name": "Count_copies_by_id",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [

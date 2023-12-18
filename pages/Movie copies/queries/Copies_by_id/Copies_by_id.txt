@@ -1,0 +1,1 @@
+SELECT * FROM public.bookcopies WHERE ID = {{appsmith.URL.queryParams.movieId}};

@@ -1,0 +1,105 @@
+-- Dropping old tables if they exist
+DROP TABLE IF EXISTS Authorship, ActorsInFilm, ScreenwriterFilm, FilmDirection, Actors, Directors, Screenwriters, Movies, Audiobooks, BookCopies, Books, Categories, Persons, Authors, MovieCopies;
+
+-- Creating Persons table
+CREATE TABLE Persons (
+    ID SERIAL PRIMARY KEY,
+    LastName VARCHAR(255),
+    FirstName VARCHAR(255)
+);
+
+-- Creating Authors table
+CREATE TABLE Authors (
+    ID SERIAL PRIMARY KEY,
+    PersonID INT REFERENCES Persons(ID)
+);
+
+-- Creating Categories table
+CREATE TABLE Categories (
+    ID SERIAL PRIMARY KEY,
+    Name VARCHAR(255)
+);
+
+-- Creating Movies table
+CREATE TABLE Movies (
+    ID SERIAL PRIMARY KEY,
+    Title VARCHAR(255),
+    Duration INT,
+    CategoryID INT REFERENCES Categories(ID)
+);
+
+-- Creating Directors table
+CREATE TABLE Directors (
+    ID SERIAL PRIMARY KEY,
+    PersonID INT REFERENCES Persons(ID)
+);
+
+-- Creating Screenwriters table
+CREATE TABLE Screenwriters (
+    ID SERIAL PRIMARY KEY,
+    PersonID INT REFERENCES Persons(ID)
+);
+
+-- Creating Actors table
+CREATE TABLE Actors (
+    ID SERIAL PRIMARY KEY,
+    PersonID INT REFERENCES Persons(ID)
+);
+
+-- Creating ActorsInFilm table
+CREATE TABLE ActorsInFilm (
+    ID SERIAL PRIMARY KEY,
+    ActorID INT REFERENCES Actors(ID),
+    FilmID INT REFERENCES Movies(ID)
+);
+
+-- Creating FilmDirection table
+CREATE TABLE FilmDirection (
+    ID SERIAL PRIMARY KEY,
+    DirectorID INT REFERENCES Directors(ID),
+    FilmID INT REFERENCES Movies(ID)
+);
+
+-- Creating ScreenwriterFilm table
+CREATE TABLE ScreenwriterFilm (
+    ID SERIAL PRIMARY KEY,
+    ScreenwriterID INT REFERENCES Screenwriters(ID),
+    FilmID INT REFERENCES Movies(ID)
+);
+
+-- Creating Books table
+CREATE TABLE Books (
+    ID SERIAL PRIMARY KEY,
+    Author VARCHAR(255),
+    Title VARCHAR(255)
+);
+
+-- Creating BookCopies table
+CREATE TABLE BookCopies (
+    ID SERIAL PRIMARY KEY,
+    BookID INT REFERENCES Books(ID),
+    ReleaseYear INT,
+    Available BOOLEAN
+);
+
+-- Creating Audiobooks table
+CREATE TABLE Audiobooks (
+    ID SERIAL PRIMARY KEY,
+    BookID INT REFERENCES Books(ID),
+    Available BOOLEAN
+);
+
+-- Creating Authorship table
+CREATE TABLE Authorship (
+    ID SERIAL PRIMARY KEY,
+    AuthorID INT REFERENCES Authors(ID),
+    BookID INT REFERENCES Books(ID)
+);
+
+-- Creating MovieCopies table
+CREATE TABLE MovieCopies (
+    ID SERIAL PRIMARY KEY,
+    MovieID INT REFERENCES Movies(ID),
+    ReleaseYear INT,
+    Available BOOLEAN
+);

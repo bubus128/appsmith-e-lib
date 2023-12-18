@@ -1,0 +1,3 @@
+UPDATE Audiobooks
+SET available = false
+WHERE id = {{this.params.copyId}}
