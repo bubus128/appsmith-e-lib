@@ -1,0 +1,3 @@
+UPDATE public.moviesrent
+set public.moviesrent.returned = TRUE
+WHERE public.moviesrent.rentid = {{this.params.rent_id}}

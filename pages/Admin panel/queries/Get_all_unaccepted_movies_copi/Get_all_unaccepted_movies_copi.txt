@@ -1,0 +1,6 @@
+SELECT
+    *
+FROM
+    public.moviecopies
+WHERE
+    public.moviecopies.Accepted = FALSE

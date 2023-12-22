@@ -1,1 +1,1 @@
-SELECT * FROM public.bookcopies WHERE ID = {{appsmith.URL.queryParams.movieId}};
+SELECT * FROM public.moviecopies WHERE public.moviecopies.movieid = {{appsmith.URL.queryParams.movieId}};

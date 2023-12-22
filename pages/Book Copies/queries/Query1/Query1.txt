@@ -1,0 +1,2 @@
+INSERT INTO public.booksrent (UserID, BookCopyID) VALUES
+({{appsmith.store.user_id}}, {{this.params.copy_id}})

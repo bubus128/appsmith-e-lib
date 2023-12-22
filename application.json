@@ -2,7 +2,7 @@
   "pages": [
     {
       "id": "Main Page",
-      "isDefault": true
+      "isDefault": false
     },
     {
       "id": "Books",
@@ -22,6 +22,26 @@
     },
     {
       "id": "Movie copies",
+      "isDefault": false
+    },
+    {
+      "id": "LogIn",
+      "isDefault": true
+    },
+    {
+      "id": "Rents",
+      "isDefault": false
+    },
+    {
+      "id": "Admin panel",
+      "isDefault": false
+    },
+    {
+      "id": "Librarian panel",
+      "isDefault": false
+    },
+    {
+      "id": "Add book",
       "isDefault": false
     }
   ],

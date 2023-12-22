@@ -3,6 +3,12 @@
     "mobileBottomRow": 19,
     "widgetName": "ButtonGroup1",
     "isCanvas": false,
+    "dynamicPropertyPathList": [
+        {"key": "groupButtons.groupButton0vny38838t.isVisible"},
+        {"key": "groupButtons.groupButtonavqgnmrris.isVisible"},
+        {"key": "groupButtons.groupButtonf70uotkryk.isVisible"},
+        {"key": "groupButtons.groupButton2fnp6guiwx.isVisible"}
+    ],
     "displayName": "Button Group",
     "iconSVG": "/static/media/icon.bb8db4853027d74a78963c3375841e4b.svg",
     "searchTags": [
@@ -14,8 +20,46 @@
     "parentRowSpace": 10,
     "type": "BUTTON_GROUP_WIDGET",
     "groupButtons": {
+        "groupButtonavqgnmrris": {
+            "onClick": "{{navigateTo('Admin panel', {}, 'SAME_WINDOW');}}",
+            "buttonType": "SIMPLE",
+            "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+            "widgetId": "1970qo42a1",
+            "menuItems": {},
+            "index": 3,
+            "id": "groupButtonavqgnmrris",
+            "label": "Admin Panel",
+            "isDisabled": false,
+            "isVisible": "{{appsmith.store.role == 'admin'}}",
+            "placement": "CENTER"
+        },
+        "groupButtonf70uotkryk": {
+            "onClick": "{{navigateTo('Rents', {}, 'SAME_WINDOW');}}",
+            "buttonType": "SIMPLE",
+            "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+            "widgetId": "nwsb7zo1az",
+            "menuItems": {},
+            "index": 2,
+            "id": "groupButtonf70uotkryk",
+            "label": "Rents",
+            "isDisabled": false,
+            "isVisible": "{{appsmith.store.role == 'customer'}}",
+            "placement": "CENTER"
+        },
+        "groupButton2fnp6guiwx": {
+            "buttonType": "SIMPLE",
+            "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+            "widgetId": "4f4fk5r8p4",
+            "menuItems": {},
+            "index": 5,
+            "id": "groupButton2fnp6guiwx",
+            "label": "Add book",
+            "isDisabled": false,
+            "isVisible": "{{appsmith.store.role == 'librarian'}}",
+            "placement": "CENTER"
+        },
         "groupButton1": {
-            "onClick": "{{navigateTo('Movies', {}, 'SAME_WINDOW');}}",
+            "onClick": "{{navigateTo('Books', {}, 'SAME_WINDOW');}}",
             "buttonType": "SIMPLE",
             "iconName": "book",
             "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -28,8 +72,21 @@
             "isVisible": true,
             "isDisabled": false
         },
+        "groupButton0vny38838t": {
+            "onClick": "{{navigateTo('Librarian panel', {}, 'SAME_WINDOW');}}",
+            "buttonType": "SIMPLE",
+            "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+            "widgetId": "mae2dowfvp",
+            "menuItems": {},
+            "index": 4,
+            "id": "groupButton0vny38838t",
+            "label": "Librarian Panel",
+            "isDisabled": false,
+            "isVisible": "{{appsmith.store.role == 'librarian'}}",
+            "placement": "CENTER"
+        },
         "groupButton2": {
-            "onClick": "{{navigateTo('Books', {\n  \"type\": \"movie\",\n  \"copy_type\": \"movie_copy\"\n}, 'SAME_WINDOW');}}",
+            "onClick": "{{navigateTo('Movies', {\n  \"type\": \"movie\",\n  \"copy_type\": \"movie_copy\"\n}, 'SAME_WINDOW');}}",
             "buttonType": "SIMPLE",
             "iconName": "film",
             "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -49,12 +106,23 @@
     "parentColumnSpace": 13.3125,
     "dynamicTriggerPathList": [
         {"key": "groupButtons.groupButton2.onClick"},
-        {"key": "groupButtons.groupButton1.onClick"}
+        {"key": "groupButtons.groupButton1.onClick"},
+        {"key": "groupButtons.groupButtonf70uotkryk.onClick"},
+        {"key": "groupButtons.groupButtonavqgnmrris.onClick"},
+        {"key": "groupButtons.groupButton0vny38838t.onClick"}
     ],
     "leftColumn": 22,
     "dynamicBindingPathList": [
         {"key": "groupButtons.groupButton1.buttonColor"},
-        {"key": "groupButtons.groupButton2.buttonColor"}
+        {"key": "groupButtons.groupButton2.buttonColor"},
+        {"key": "groupButtons.groupButtonf70uotkryk.buttonColor"},
+        {"key": "groupButtons.groupButtonavqgnmrris.buttonColor"},
+        {"key": "groupButtons.groupButton0vny38838t.buttonColor"},
+        {"key": "groupButtons.groupButton0vny38838t.isVisible"},
+        {"key": "groupButtons.groupButtonavqgnmrris.isVisible"},
+        {"key": "groupButtons.groupButtonf70uotkryk.isVisible"},
+        {"key": "groupButtons.groupButton2fnp6guiwx.buttonColor"},
+        {"key": "groupButtons.groupButton2fnp6guiwx.isVisible"}
     ],
     "key": "b72hrjw0a5",
     "orientation": "vertical",
@@ -71,7 +139,9 @@
     "mobileTopRow": 15,
     "responsiveBehavior": "fill",
     "childStylesheet": {"button": {"buttonColor": "{{appsmith.theme.colors.primaryColor}}"}},
+    "originalTopRow": 15,
     "borderRadius": "1.5rem",
     "mobileLeftColumn": 22,
+    "originalBottomRow": 51,
     "buttonVariant": "PRIMARY"
 }

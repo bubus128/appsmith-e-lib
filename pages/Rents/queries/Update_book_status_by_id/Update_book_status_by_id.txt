@@ -1,0 +1,3 @@
+UPDATE public.booksrent
+SET returned = TRUE
+WHERE public.booksrent.rentid = {{this.params.rent_id}};

@@ -1,0 +1,19 @@
+SELECT
+    public.users.username,
+    public.books.Title,
+    public.audiobooks.available,
+    public.audiobookrents.rentdate,
+    public.audiobookrents.returndate,
+		public.audiobookrents.returned,
+		public.audiobookrents.rentid
+FROM
+    public.users
+JOIN
+    public.audiobookrents ON public.users.user_id = public.audiobookrents.userid
+JOIN
+    public.audiobooks ON public.audiobookrents.audiobookid = public.audiobooks.id
+JOIN
+    public.books ON public.audiobooks.bookid = public.books.id
+WHERE
+    public.users.username = '{{appsmith.store.user}}' AND
+		public.audiobookrents.returndate IS NULL;

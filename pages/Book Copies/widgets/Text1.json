@@ -20,7 +20,7 @@
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "parentColumnSpace": 13.3125,
     "dynamicTriggerPathList": [],
-    "leftColumn": 26,
+    "leftColumn": 12,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
@@ -32,7 +32,7 @@
     "text": "\"{{appsmith.URL.queryParams.title}}\" Book Copies",
     "key": "5mzig2ar1l",
     "isDeprecated": false,
-    "rightColumn": 42,
+    "rightColumn": 28,
     "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "chikq600q4",
@@ -54,7 +54,7 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 24,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 4,
+    "originalBottomRow": 5,
     "fontSize": "1rem",
     "minDynamicHeight": 4
 }

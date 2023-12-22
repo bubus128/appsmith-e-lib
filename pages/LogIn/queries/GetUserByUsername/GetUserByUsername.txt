@@ -1,0 +1,1 @@
+SELECT public.users.rol, public.users.user_id FROM public.users where username = {{this.params.username}};

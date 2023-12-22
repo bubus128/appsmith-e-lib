@@ -1,0 +1,12 @@
+SELECT
+    Count(*)
+FROM
+    Users
+JOIN
+    public.booksrent ON public.users.user_id = public.booksrent.userid
+JOIN
+    public.bookcopies ON public.booksrent.bookcopyid = public.bookcopies.id
+JOIN
+    public.books ON public.bookcopies.bookid = public.books.id
+WHERE
+    public.users.username = '{{appsmith.store.user}}';

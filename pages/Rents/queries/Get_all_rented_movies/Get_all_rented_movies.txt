@@ -1,0 +1,20 @@
+SELECT
+    public.users.username,
+    public.movies.Title,
+    public.moviecopies.releaseyear,
+    public.moviecopies.available,
+    public.moviesrent.rentdate,
+    public.moviesrent.returndate,
+		public.moviesrent.returned,
+		public.moviesrent.rentid
+FROM
+    public.users
+JOIN
+    public.moviesrent ON public.users.user_id = public.moviesrent.userid
+JOIN
+    public.moviecopies ON public.moviesrent.moviecopyid = public.moviecopies.id
+JOIN
+    public.movies ON public.moviecopies.movieid = public.movies.id
+WHERE
+    public.users.username = '{{appsmith.store.user}}' AND
+		public.moviesrent.returndate IS NULL;

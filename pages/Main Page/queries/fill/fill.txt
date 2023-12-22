@@ -26,10 +26,13 @@ INSERT INTO Categories (ID, Name) VALUES
     (3, 'Sci-Fi');
 
 -- Wypełnianie tabeli Movies
-INSERT INTO Movies (ID, Title, Duration, CategoryID) VALUES
-    (1, 'The Matrix', 150, 3),
-    (2, 'Inception', 180, 3),
-    (3, 'Titanic', 195, 2);
+INSERT INTO Movies (ID, Title, Duration, CategoryID, Accepted) VALUES
+    (1, 'The Matrix', 150, 3, TRUE),
+    (2, 'Inception', 180, 3, TRUE),
+    (3, 'Titanic', 195, 2, TRUE),
+		(4, 'The Godfather', 175, 1, FALSE),
+    (5, 'The Shawshank Redemption', 142, 2, FALSE),
+    (6, 'Pulp Fiction', 154, 1, FALSE);
 
 -- Wypełnianie tabeli Directors
 INSERT INTO Directors (ID, PersonID) VALUES
@@ -68,22 +71,84 @@ INSERT INTO ScreenwriterFilm (ID, ScreenwriterID, FilmID) VALUES
     (3, 3, 3);
 
 -- Wypełnianie tabeli Books
-INSERT INTO Books (ID, Author, Title) VALUES
-    (1, 'Stephen King', 'The Shining'),
-    (2, 'Jane Austen', 'Pride and Prejudice'),
-    (3, 'George Orwell', '1984');
+INSERT INTO Books (ID, Author, Title, Accepted) VALUES
+    (1, 'Stephen King', 'The Shining', TRUE),
+    (2, 'Jane Austen', 'Pride and Prejudice', TRUE),
+    (3, 'George Orwell', '1984', TRUE),
+		(4, 'J.K. Rowling', 'Harry Potter and the Philosopher''s Stone', TRUE),
+    (5, 'George R.R. Martin', 'A Game of Thrones', TRUE),
+    (6, 'Harper Lee', 'To Kill a Mockingbird', TRUE),
+		(7, 'Autor', 'Ksiazka', TRUE);
 
--- Wypełnianie tabeli BookCopies
-INSERT INTO BookCopies (ID, BookID, ReleaseYear, Available) VALUES
-    (1, 1, 2005, true),
-    (2, 2, 2010, true),
-    (3, 3, 2015, false);
+-- Dodanie kolejnych kopii książek
+INSERT INTO BookCopies (BookID, ReleaseYear, Available, Accepted) VALUES
+    (1, 2010, true, TRUE),
+    (1, 2012, true, TRUE),
+    (1, 2014, true, TRUE),
+    (1, 2018, true, TRUE),
+    (1, 2020, true, TRUE),
+    (2, 2015, true, TRUE),
+    (2, 2017, true, TRUE),
+    (2, 2019, true, TRUE),
+    (2, 2021, true, TRUE),
+    (2, 2023, true, TRUE),
+    (3, 2016, true, TRUE),
+    (3, 2018, true, TRUE),
+    (3, 2020, true, TRUE),
+    (3, 2022, true, TRUE),
+    (3, 2024, true, TRUE),
+		(3, 2022, true, FALSE),
+		(3, 2022, true, FALSE),
+		(3, 2022, true, FALSE),
+		(3, 2022, true, FALSE),
+		(3, 2022, true, FALSE);
 
--- Wypełnianie tabeli Audiobooks
-INSERT INTO Audiobooks (ID, BookID, Available) VALUES
-    (1, 1, true),
-    (2, 2, true),
-    (3, 3, false);
+-- Dodanie kolejnych kopii filmów
+INSERT INTO MovieCopies (MovieID, ReleaseYear, Available, Accepted) VALUES
+    (1, 2012, true, TRUE),
+    (1, 2014, true, TRUE),
+    (1, 2016, true, TRUE),
+    (1, 2018, true, TRUE),
+    (1, 2020, true, TRUE),
+    (2, 2015, true, TRUE),
+    (2, 2017, true, TRUE),
+    (2, 2019, true, TRUE),
+    (2, 2021, true, TRUE),
+    (2, 2023, true, TRUE),
+    (3, 2016, true, TRUE),
+    (3, 2018, true, TRUE),
+    (3, 2020, true, TRUE),
+    (3, 2022, true, TRUE),
+    (3, 2024, true, TRUE),
+		(3, 2024, true, FALSE),
+		(3, 2024, true, FALSE),
+		(3, 2024, true, FALSE),
+		(3, 2024, true, FALSE),
+		(3, 2024, true, FALSE);
+
+
+-- Dodanie kolejnych audiobooków
+INSERT INTO Audiobooks (BookID, Available, Accepted) VALUES
+    (1, true, TRUE),
+    (1, true, TRUE),
+    (1, true, TRUE),
+    (1, true, TRUE),
+    (1, true, TRUE),
+    (2, true, TRUE),
+    (2, true, TRUE),
+    (2, true, TRUE),
+    (2, true, TRUE),
+    (2, true, TRUE),
+    (3, true, TRUE),
+    (3, true, TRUE),
+    (3, true, TRUE),
+    (3, true, TRUE),
+    (3, true, TRUE),
+		(3, true, FALSE),
+		(3, true, FALSE),
+		(3, true, FALSE),
+		(3, true, FALSE),
+		(3, true, FALSE);
 
 -- Wypełnianie tabeli Authorship
 INSERT INTO Authorship (ID, AuthorID, BookID) VALUES
@@ -91,8 +156,29 @@ INSERT INTO Authorship (ID, AuthorID, BookID) VALUES
     (2, 2, 2),
     (3, 3, 3);
 
--- Wypełnianie tabeli MovieCopies
-INSERT INTO MovieCopies (ID, MovieID, ReleaseYear, Available) VALUES
-    (1, 1, 2005, true),
-    (2, 2, 2010, true),
-    (3, 3, 2015, false);
+-- Wypełnianie tabeli Users
+INSERT INTO Users (username, password_hash, salt, rol) VALUES
+    ('user1', crypt('password1', gen_salt('bf', 8)), gen_salt('bf', 8), 'customer'),
+    ('user2', crypt('password2', gen_salt('bf', 8)), gen_salt('bf', 8), 'customer'),
+    ('user3', crypt('password3', gen_salt('bf', 8)), gen_salt('bf', 8), 'customer'),
+		('librarian', crypt('password3', gen_salt('bf', 8)), gen_salt('bf', 8), 'librarian'),
+		('admin', crypt('password3', gen_salt('bf', 8)), gen_salt('bf', 8), 'admin');
+
+-- Dodanie tabeli reprezentującej wypożyczone kopie książek przez użytkowników
+INSERT INTO BooksRent (UserID, BookCopyID, RentDate, ReturnDate) VALUES
+    (1, 1, '2023-01-01', '2023-01-15'),
+    (2, 2, '2023-02-01', '2023-02-15'),
+    (3, 3, '2023-03-01', null);  -- Użytkownik 3 wypożyczył, ale jeszcze nie zwrócił
+
+-- Dodanie tabeli reprezentującej wypożyczone kopie filmów przez użytkowników
+INSERT INTO MoviesRent (UserID, MovieCopyID, RentDate, ReturnDate) VALUES
+    (1, 1, '2023-01-01', '2023-01-15'),
+    (2, 2, '2023-02-01', '2023-02-15'),
+    (3, 3, '2023-03-01', null);  -- Użytkownik 3 w
+
+-- Dodanie tabeli reprezentującej wypożyczone audiobooki przez użytkowników
+INSERT INTO AudiobookRents (UserID, AudiobookID, RentDate, ReturnDate)
+VALUES
+    (1, 1, '2023-01-01', '2023-01-15'),
+    (2, 2, '2023-02-01', '2023-02-15'),
+    (3, 3, '2023-03-01', null);  -- Użytkownik 3 wypożyczył, ale jeszcze nie zwrócił

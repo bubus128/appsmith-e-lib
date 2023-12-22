@@ -1,0 +1,6 @@
+SELECT
+    *
+FROM
+    public.movies
+WHERE
+    public.movies.Accepted = FALSE

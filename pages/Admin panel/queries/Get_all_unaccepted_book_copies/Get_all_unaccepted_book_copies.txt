@@ -1,0 +1,6 @@
+SELECT
+    *
+FROM
+    public.bookcopies
+WHERE
+    public.bookcopies.Accepted = FALSE

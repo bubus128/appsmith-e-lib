@@ -23,11 +23,12 @@
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "borderRadius"},
-        {"key": "fontFamily"}
+        {"key": "fontFamily"},
+        {"key": "text"}
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "E-LIBRARY",
+    "text": "Welcome {{appsmith.store.user}}",
     "key": "ph5glqkph7",
     "isDeprecated": false,
     "rightColumn": 45,
@@ -44,11 +45,11 @@
     "isLoading": false,
     "mobileTopRow": 1,
     "responsiveBehavior": "fill",
-    "originalTopRow": 1,
+    "originalTopRow": 3,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 14,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 5,
+    "originalBottomRow": 7,
     "fontSize": "1.25rem",
     "minDynamicHeight": 4
 }

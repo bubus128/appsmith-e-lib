@@ -1,0 +1,6 @@
+SELECT
+    *
+FROM
+    public.audiobooks
+WHERE
+    public.audiobooks.accepted = FALSE

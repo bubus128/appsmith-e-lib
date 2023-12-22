@@ -19,7 +19,7 @@
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "parentColumnSpace": 13.3125,
     "dynamicTriggerPathList": [],
-    "leftColumn": 26,
+    "leftColumn": 17,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
@@ -30,7 +30,7 @@
     "text": "Books",
     "key": "5mzig2ar1l",
     "isDeprecated": false,
-    "rightColumn": 42,
+    "rightColumn": 23,
     "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "chikq600q4",

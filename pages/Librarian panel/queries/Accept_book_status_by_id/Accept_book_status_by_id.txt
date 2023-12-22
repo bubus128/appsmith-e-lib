@@ -1,0 +1,9 @@
+UPDATE public.bookcopies
+SET available = TRUE
+FROM public.booksrent
+WHERE public.bookcopies.id = public.booksrent.bookcopyid
+  AND public.booksrent.rentid = {{this.params.rent_id}};
+
+UPDATE public.booksrent
+SET returndate = CURRENT_DATE, returned = TRUE
+WHERE public.booksrent.rentid = {{this.params.rent_id}};

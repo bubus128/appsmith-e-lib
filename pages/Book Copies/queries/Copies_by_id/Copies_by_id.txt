@@ -1,1 +1,1 @@
-SELECT * FROM public.bookcopies WHERE ID = {{appsmith.URL.queryParams.bookId}};
+SELECT * FROM public.bookcopies WHERE public.bookcopies.bookid = {{appsmith.URL.queryParams.bookId}};

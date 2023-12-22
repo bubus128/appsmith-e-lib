@@ -1,0 +1,19 @@
+SELECT
+    public.users.username,
+    public.books.Title,
+    public.bookcopies.releaseyear,
+    public.bookcopies.available,
+    public.booksrent.rentdate,
+		public.booksrent.returned,
+		public.booksrent.rentid
+FROM
+    public.users
+JOIN
+    public.booksrent ON public.users.user_id = public.booksrent.userid
+JOIN
+    public.bookcopies ON public.booksrent.bookcopyid = public.bookcopies.id
+JOIN
+    public.books ON public.bookcopies.bookid = public.books.id
+WHERE
+		public.booksrent.returndate IS NULL AND
+		public.booksrent.returned = TRUE;
