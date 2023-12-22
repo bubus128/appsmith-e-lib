@@ -16,10 +16,34 @@
         "submit"
     ],
     "topRow": 15,
-    "bottomRow": 51,
+    "bottomRow": 64,
     "parentRowSpace": 10,
     "type": "BUTTON_GROUP_WIDGET",
     "groupButtons": {
+        "groupButtonamivoqt4fl": {
+            "buttonType": "SIMPLE",
+            "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+            "widgetId": "cgblpl9hdj",
+            "menuItems": {},
+            "index": 6,
+            "id": "groupButtonamivoqt4fl",
+            "label": "Add book copy",
+            "isDisabled": false,
+            "isVisible": true,
+            "placement": "CENTER"
+        },
+        "groupButtonhjad83m0wy": {
+            "buttonType": "SIMPLE",
+            "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+            "widgetId": "nblk1yt25s",
+            "menuItems": {},
+            "index": 7,
+            "id": "groupButtonhjad83m0wy",
+            "label": "Add audiobook",
+            "isDisabled": false,
+            "isVisible": true,
+            "placement": "CENTER"
+        },
         "groupButtonavqgnmrris": {
             "onClick": "{{navigateTo('Admin panel', {}, 'SAME_WINDOW');}}",
             "buttonType": "SIMPLE",
@@ -31,6 +55,18 @@
             "label": "Admin Panel",
             "isDisabled": false,
             "isVisible": "{{appsmith.store.role == 'admin'}}",
+            "placement": "CENTER"
+        },
+        "groupButton0l5lnn6jtl": {
+            "buttonType": "SIMPLE",
+            "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+            "widgetId": "bz9bs1s20b",
+            "menuItems": {},
+            "index": 9,
+            "id": "groupButton0l5lnn6jtl",
+            "label": "Add movie copy",
+            "isDisabled": false,
+            "isVisible": true,
             "placement": "CENTER"
         },
         "groupButtonf70uotkryk": {
@@ -85,6 +121,18 @@
             "isVisible": "{{appsmith.store.role == 'librarian'}}",
             "placement": "CENTER"
         },
+        "groupButtons43i7yrx0p": {
+            "buttonType": "SIMPLE",
+            "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+            "widgetId": "twq87ovr1s",
+            "menuItems": {},
+            "index": 8,
+            "id": "groupButtons43i7yrx0p",
+            "label": "Add movie",
+            "isDisabled": false,
+            "isVisible": true,
+            "placement": "CENTER"
+        },
         "groupButton2": {
             "onClick": "{{navigateTo('Movies', {\n  \"type\": \"movie\",\n  \"copy_type\": \"movie_copy\"\n}, 'SAME_WINDOW');}}",
             "buttonType": "SIMPLE",
@@ -122,7 +170,11 @@
         {"key": "groupButtons.groupButtonavqgnmrris.isVisible"},
         {"key": "groupButtons.groupButtonf70uotkryk.isVisible"},
         {"key": "groupButtons.groupButton2fnp6guiwx.buttonColor"},
-        {"key": "groupButtons.groupButton2fnp6guiwx.isVisible"}
+        {"key": "groupButtons.groupButton2fnp6guiwx.isVisible"},
+        {"key": "groupButtons.groupButtonamivoqt4fl.buttonColor"},
+        {"key": "groupButtons.groupButtonhjad83m0wy.buttonColor"},
+        {"key": "groupButtons.groupButtons43i7yrx0p.buttonColor"},
+        {"key": "groupButtons.groupButton0l5lnn6jtl.buttonColor"}
     ],
     "key": "b72hrjw0a5",
     "orientation": "vertical",

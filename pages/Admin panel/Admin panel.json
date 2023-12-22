@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1720,
+          "bottomRow": 1430,
           "containerStyle": "none",
           "snapRows": 53,
           "parentRowSpace": 1,
@@ -27,6 +27,14 @@
         },
         "layoutOnLoadActions": [
           [
+            {
+              "id": "Admin panel_Get_all_unaccepted_book_copies",
+              "name": "Get_all_unaccepted_book_copies",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Admin panel_Get_all_unaccepted_books",
               "name": "Get_all_unaccepted_books",
@@ -44,14 +52,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Admin panel_Get_all_unaccepted_movies_copi",
-              "name": "Get_all_unaccepted_movies_copi",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Admin panel_Get_unaccepted_audiobooks",
               "name": "Get_unaccepted_audiobooks",
               "confirmBeforeExecute": false,
@@ -61,16 +61,6 @@
             }
           ],
           [
-            {
-              "id": "Admin panel_Rented_audiobooks_count",
-              "name": "Rented_audiobooks_count",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.store.user"
-              ],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "Admin panel_Rented_books_count",
               "name": "Rented_books_count",

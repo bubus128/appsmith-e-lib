@@ -30,9 +30,10 @@ INSERT INTO Movies (ID, Title, Duration, CategoryID, Accepted) VALUES
     (1, 'The Matrix', 150, 3, TRUE),
     (2, 'Inception', 180, 3, TRUE),
     (3, 'Titanic', 195, 2, TRUE),
-		(4, 'The Godfather', 175, 1, FALSE),
-    (5, 'The Shawshank Redemption', 142, 2, FALSE),
-    (6, 'Pulp Fiction', 154, 1, FALSE);
+		(4, 'The Godfather', 175, 1, TRUE),
+    (5, 'The Shawshank Redemption', 142, 2, TRUE),
+    (6, 'Pulp Fiction', 154, 1, TRUE),
+		(7, 'Movie', 123, 1, TRUE);;
 
 -- Wypełnianie tabeli Directors
 INSERT INTO Directors (ID, PersonID) VALUES
@@ -77,8 +78,7 @@ INSERT INTO Books (ID, Author, Title, Accepted) VALUES
     (3, 'George Orwell', '1984', TRUE),
 		(4, 'J.K. Rowling', 'Harry Potter and the Philosopher''s Stone', TRUE),
     (5, 'George R.R. Martin', 'A Game of Thrones', TRUE),
-    (6, 'Harper Lee', 'To Kill a Mockingbird', TRUE),
-		(7, 'Autor', 'Ksiazka', TRUE);
+    (6, 'Harper Lee', 'To Kill a Mockingbird', FALSE);
 
 -- Dodanie kolejnych kopii książek
 INSERT INTO BookCopies (BookID, ReleaseYear, Available, Accepted) VALUES
@@ -97,11 +97,11 @@ INSERT INTO BookCopies (BookID, ReleaseYear, Available, Accepted) VALUES
     (3, 2020, true, TRUE),
     (3, 2022, true, TRUE),
     (3, 2024, true, TRUE),
-		(3, 2022, true, FALSE),
-		(3, 2022, true, FALSE),
-		(3, 2022, true, FALSE),
-		(3, 2022, true, FALSE),
-		(3, 2022, true, FALSE);
+		(3, 2022, true, TRUE),
+		(3, 2022, true, TRUE),
+		(3, 2022, true, TRUE),
+		(3, 2022, true, TRUE),
+		(1, 2023, true, TRUE);
 
 -- Dodanie kolejnych kopii filmów
 INSERT INTO MovieCopies (MovieID, ReleaseYear, Available, Accepted) VALUES
@@ -120,11 +120,8 @@ INSERT INTO MovieCopies (MovieID, ReleaseYear, Available, Accepted) VALUES
     (3, 2020, true, TRUE),
     (3, 2022, true, TRUE),
     (3, 2024, true, TRUE),
-		(3, 2024, true, FALSE),
-		(3, 2024, true, FALSE),
-		(3, 2024, true, FALSE),
-		(3, 2024, true, FALSE),
-		(3, 2024, true, FALSE);
+		(3, 2024, true, TRUE),
+		(1, 2023, true, TRUE);
 
 
 -- Dodanie kolejnych audiobooków
@@ -144,11 +141,8 @@ INSERT INTO Audiobooks (BookID, Available, Accepted) VALUES
     (3, true, TRUE),
     (3, true, TRUE),
     (3, true, TRUE),
-		(3, true, FALSE),
-		(3, true, FALSE),
-		(3, true, FALSE),
-		(3, true, FALSE),
-		(3, true, FALSE);
+		(3, true, TRUE),
+		(2, true, TRUE);
 
 -- Wypełnianie tabeli Authorship
 INSERT INTO Authorship (ID, AuthorID, BookID) VALUES

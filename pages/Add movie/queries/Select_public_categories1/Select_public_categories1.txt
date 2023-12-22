@@ -1,0 +1,6 @@
+SELECT
+  *
+FROM
+  public.categories
+WHERE
+  "name" ilike '%{{Select1.filterText}}%'

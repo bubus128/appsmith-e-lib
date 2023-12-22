@@ -43,6 +43,22 @@
     {
       "id": "Add book",
       "isDefault": false
+    },
+    {
+      "id": "Add book copy",
+      "isDefault": false
+    },
+    {
+      "id": "Add movie",
+      "isDefault": false
+    },
+    {
+      "id": "Add audiobook",
+      "isDefault": false
+    },
+    {
+      "id": "Add mocie copy",
+      "isDefault": false
     }
   ],
   "viewMode": false,

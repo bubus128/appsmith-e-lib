@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "Get_all_unaccepted_book_copies",
+    "name": "Select_public_books1",
     "datasource": {
       "name": "books",
       "pluginId": "postgres-plugin",
@@ -13,12 +13,12 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Admin panel",
+    "pageId": "Add mocie copy",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT\n    *\nFROM\n    public.bookcopies\nWHERE\n    public.bookcopies.Accepted = FALSE",
+      "body": "SELECT\n  *\nFROM\n  public.books\nWHERE\n  \"title\" ilike '%{{Select1.filterText}}%'",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,19 +26,25 @@
         }
       ]
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "Select1.filterText"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-21T19:17:13Z"
+    "createdAt": "2023-12-22T19:19:21Z"
   },
-  "id": "Admin panel_Get_all_unaccepted_book_copies",
+  "id": "Add mocie copy_Select_public_books1",
   "deleted": false,
-  "gitSyncId": "65800c315e703460a35a6991_65848f396f68325c3cfe1389"
+  "gitSyncId": "65800c315e703460a35a6991_6585e1396f68325c3cfe13f7"
 }

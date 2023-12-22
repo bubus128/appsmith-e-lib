@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Main Page",
-    "slug": "main-page",
+    "name": "Add audiobook",
+    "slug": "add-audiobook",
     "layouts": [
       {
         "viewMode": false,
@@ -13,22 +13,35 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 640,
+          "bottomRow": 380,
           "containerStyle": "none",
-          "snapRows": 128,
+          "snapRows": 53,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
           "version": 87,
-          "minHeight": 1300,
+          "minHeight": 550,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Add audiobook_Select_public_books1",
+              "name": "Select_public_books1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Select1.filterText"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Main Page",
+        "id": "Add audiobook",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -39,5 +52,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "657dd0d75e703460a35a687d_657dd9325e703460a35a688d"
+  "gitSyncId": "65800c315e703460a35a6991_6585e1266f68325c3cfe13f0"
 }

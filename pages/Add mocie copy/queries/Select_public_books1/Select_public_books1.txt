@@ -1,0 +1,6 @@
+SELECT
+  *
+FROM
+  public.books
+WHERE
+  "title" ilike '%{{Select1.filterText}}%'
